@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Canvas Lineas</title>
+    <title>Canvas Lineas: Propiedades</title>
     <meta charset="UTF-8">
     <style>
         canvas{
@@ -16,48 +16,70 @@
             ctx = canvas.getContext("2d");
             if(ctx){
 
-                // Line 1:
+                /* lineCap */
 
+                // Line 1:
                 // estilos
-                ctx.lineWidth = 5;
+                ctx.lineWidth = 25;
                 ctx.strokeStyle = "yellow";
                 // Iniciar trazo
                 ctx.beginPath();
+                    ctx.lineCap = "round"
                 ctx.moveTo(50,50);
                 ctx.lineTo(450,50);
                 ctx.stroke();
 
                 // Line 2:
-
                 // estilos
-                ctx.lineWidth = 15;
+                ctx.lineWidth = 25;
                 ctx.strokeStyle = "orange";
                 // Iniciar trazo
                 ctx.beginPath();
-                ctx.moveTo(50,150);
-                ctx.lineTo(450,150);
+                    ctx.lineCap = "square"
+                ctx.moveTo(50,100);
+                ctx.lineTo(450,100);
                 ctx.stroke();
 
                 // Line 3:
-
                 // estilos
                 ctx.lineWidth = 25;
                 ctx.strokeStyle = "blue";
                 // Iniciar trazo
                 ctx.beginPath();
-                ctx.moveTo(50,250);
-                ctx.lineTo(450,250);
+                    ctx.lineCap = "butt"
+                ctx.moveTo(50,150);
+                ctx.lineTo(450,150);
                 ctx.stroke();
 
-                // Line 4:
+                /* lineJoin */
 
-                // estilos
-                ctx.lineWidth = 35;
-                ctx.strokeStyle = "red";
-                // Iniciar trazo
                 ctx.beginPath();
-                ctx.moveTo(50,350);
-                ctx.lineTo(450,350);
+                    // no lineJoin
+                    ctx.lineCap = "round"
+                ctx.moveTo(75,350);
+                ctx.lineTo(125,250);
+                ctx.lineTo(175,350);
+                ctx.stroke();
+
+                ctx.beginPath();
+                    ctx.lineJoin = "round"
+                ctx.moveTo(175,350);
+                ctx.lineTo(225,250);
+                ctx.lineTo(275,350);
+                ctx.stroke();
+
+                ctx.beginPath();
+                    ctx.lineJoin = "bevel"
+                ctx.moveTo(275,350);
+                ctx.lineTo(325,250);
+                ctx.lineTo(375,350);
+                ctx.stroke();
+
+                ctx.beginPath();
+                    ctx.lineJoin = "miter"
+                ctx.moveTo(375,350);
+                ctx.lineTo(425,250);
+                ctx.lineTo(475,350);
                 ctx.stroke();
 
             } else {
