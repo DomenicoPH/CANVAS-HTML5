@@ -95,6 +95,12 @@ Define el estilo de las uniones (vértices) entre trazos dentro de la linea.
     ctx.lineJoin = "bevel"
     ctx.lineJoin = "miter"
 
+### closePath()
+Cierra el último punto con el primero.
+
+### fill()
+Rellena el trazo. Si el trazo no está cerrado, este método añade una linea del punto final al inicial. Rellena el trazo con el valor de la propiedad fillStyle (por defecto es negro).
+
 ---
 
 ## 04 - Estados
