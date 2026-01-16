@@ -94,3 +94,17 @@ Define el estilo de las uniones (vértices) entre trazos dentro de la linea.
     ctx.lineJoin = "round"
     ctx.lineJoin = "bevel"
     ctx.lineJoin = "miter"
+
+---
+
+## 04 - Estados
+
+### save()
+Guarda el estado actual del contexto en una pila interna.
+
+    ctx.save();
+
+### restore()
+Restaura el último estado guardado con save().
+
+    ctx.restore();
