@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas Rectángulo</title>
+    <meta charset="UTF-8">
+    <style>
+        canvas{
+            background-color: green;
+            border: 3px solid yellow;
+        }
+    </style>
+    <script>
+    window.onload = function(){
+        canvas = document.getElementById("canvas");
+        if(canvas && canvas.getContext){
+            ctx = canvas.getContext("2d");
+            if(ctx){
+
+                // Line 1:
+
+                // estilos
+                ctx.lineWidth = 5;
+                ctx.strokeStyle = "yellow";
+                // Iniciar trazo
+                ctx.beginPath();
+                ctx.moveTo(50,50);
+                ctx.lineTo(450,50);
+                ctx.stroke();
+
+                // Line 2:
+
+                // estilos
+                ctx.lineWidth = 15;
+                ctx.strokeStyle = "orange";
+                // Iniciar trazo
+                ctx.beginPath();
+                ctx.moveTo(50,150);
+                ctx.lineTo(450,150);
+                ctx.stroke();
+
+                // Line 3:
+
+                // estilos
+                ctx.lineWidth = 25;
+                ctx.strokeStyle = "blue";
+                // Iniciar trazo
+                ctx.beginPath();
+                ctx.moveTo(50,250);
+                ctx.lineTo(450,250);
+                ctx.stroke();
+
+                // Line 4:
+
+                // estilos
+                ctx.lineWidth = 35;
+                ctx.strokeStyle = "red";
+                // Iniciar trazo
+                ctx.beginPath();
+                ctx.moveTo(50,350);
+                ctx.lineTo(450,350);
+                ctx.stroke();
+
+            } else {
+                alert("Tu navegador NO soporta la etiqueta canvas");
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="400">
+        Tu navegador no soporta la etiqueta canvas
+    </canvas>
+</body>
+</html>
