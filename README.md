@@ -148,13 +148,27 @@ Arco completo (con relleno):
 
 ---
 
-## 06 - Curvas Bezier
+## 06 - Curvas Bezier Cuadráticas
 
 Sintaxis:
 
     ctx.quadraticCurveTo( cpx, cpy, x, y );
 
-- **cpx**   : Control Point en X
-- **cpy**   : Control Point en Y
-- **X**     : punto final en X
-- **Y**     : punto final en Y
+**cpx**   : Control Point en X  
+**cpy**   : Control Point en Y  
+**X**     : punto final en X  
+**Y**     : punto final en Y  
+
+    ctx.beginPath();
+                    
+        var x1 = 20, y1 = 20;
+        var cpx = 150, cpy = 200;
+        var x2 = 400, y2 = 20;
+
+    ctx.moveTo(x1, y1);
+    ctx.quadraticCurveTo(cpx, cpy, x2, y2);
+    ctx.stroke();
+
+---
+
+## 07 - Curvas Bezier Cúbicas
