@@ -119,3 +119,16 @@ Restaura el último estado guardado con save().
 
 ## 05 - Arcos
 
+Sintáxis:
+
+    ctx.arc( x, y, anguloInicial, anguloFinal, sentidoCC );
+
+- Los ángulos están expresados en radianes.
+- El ángulo 0 está a las 3:00 horas.
+- El sentidoCC (Counterclockwise) viene por defecto como false.
+- Para un círculo completo el ángulo inicial es 0 y el final es 2*PI.
+- Las coordenadas X, Y representan el centro del círculo.
+- Se actualiza el dibujo tanto con stroke() como con fill().
+
+    radianes = (grados * PI) / 180
+    grados = (180 * radianes) / PI
