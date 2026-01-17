@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas Arcos</title>
+    <meta charset="UTF-8">
+    <style>
+        canvas{
+            background-color: green;
+            border: 3px solid yellow;
+        }
+    </style>
+    <script>
+    window.onload = function(){
+        canvas = document.getElementById("canvas");
+        if(canvas && canvas.getContext){
+            ctx = canvas.getContext("2d");
+            if(ctx){
+                
+                ctx.lineWidth = 10;
+                ctx.strokeStyle = "yellow";
+                ctx.fillStyle = "red";
+
+                // Path
+                ctx.beginPath();
+                ctx.arc(100, 150, 50, 1.1*Math.PI, 1.9*Math.PI);
+                ctx.stroke();
+
+            } else {
+                alert("Tu navegador NO soporta la etiqueta canvas");
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="400">
+        Tu navegador no soporta la etiqueta canvas
+    </canvas>
+</body>
+</html>

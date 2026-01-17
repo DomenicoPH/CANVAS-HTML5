@@ -96,7 +96,7 @@ Define el estilo de las uniones (vértices) entre trazos dentro de la linea.
     ctx.lineJoin = "miter"
 
 ### closePath()
-Cierra el último punto con el primero.
+Cierra el trazo conectando el último punto con el punto inicial.
 
 ### fill()
 Rellena el trazo. Si el trazo no está cerrado, este método añade una linea del punto final al inicial. Rellena el trazo con el valor de la propiedad fillStyle (por defecto es negro).
@@ -114,3 +114,8 @@ Guarda el estado actual del contexto en una pila interna.
 Restaura el último estado guardado con save().
 
     ctx.restore();
+
+---
+
+## 05 - Arcos
+
