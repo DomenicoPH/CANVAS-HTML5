@@ -119,7 +119,7 @@ Restaura el último estado guardado con save().
 
 ## 05 - Arcos
 
-Sintáxis:
+Sintaxis:
 
     ctx.arc( x, y, anguloInicial, anguloFinal, sentidoCC );
 
@@ -130,5 +130,31 @@ Sintáxis:
 - Las coordenadas X, Y representan el centro del círculo.
 - Se actualiza el dibujo tanto con stroke() como con fill().
 
-    radianes = (grados * PI) / 180
-    grados = (180 * radianes) / PI
+        radianes = (grados * PI) / 180
+        grados = (180 * radianes) / PI
+
+Arco incompleto:
+
+    ctx.beginPath();
+    ctx.arc(100, 150, 50, 1.1*Math.PI, 1.9*Math.PI);
+    ctx.stroke();
+
+Arco completo (con relleno):
+
+    ctx.beginPath();
+    ctx.arc(400, 150, 50, 0, 2*Math.PI);
+    ctx.fill();
+    ctx.stroke();
+
+---
+
+## 06 - Curvas Bezier
+
+Sintaxis:
+
+    ctx.quadraticCurveTo( cpx, cpy, x, y );
+
+- **cpx**   : Control Point en X
+- **cpy**   : Control Point en Y
+- **X**     : punto final en X
+- **Y**     : punto final en Y
