@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas Espiral</title>
+    <meta charset="UTF-8">
+    <style>
+        canvas{
+            background-color: green;
+            border: 3px solid yellow;
+        }
+    </style>
+    <script>
+    window.onload = function(){
+        canvas = document.getElementById("canvas");
+        if(canvas && canvas.getContext){
+            ctx = canvas.getContext("2d");
+            if(ctx){
+                
+                let radio = 0, angulo = 0;
+                const totalPuntos = 200;
+                const divisionesCirculo = 50;
+
+                ctx.lineWidth = 10;
+                ctx.strokeStyle = "orange";
+
+                ctx.beginPath();
+                ctx.moveTo(canvas.width / 2, canvas.height / 2);
+
+                for(var i = 0; i < totalPuntos; i++){
+                    radio += 0.75;
+                    angulo += (Math.PI * 2) / divisionesCirculo;
+                    var x = canvas.width / 2 + radio * Math.cos(angulo);
+                    var y = canvas.height / 2 + radio * Math.sin(angulo);
+                    ctx.lineTo(x, y);
+                }
+                ctx.stroke();
+
+            } else {
+                alert("Tu navegador NO soporta la etiqueta canvas");
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="300">
+        Tu navegador no soporta la etiqueta canvas
+    </canvas>
+</body>
+</html>
