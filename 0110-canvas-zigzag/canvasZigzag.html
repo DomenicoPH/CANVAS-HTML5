@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas ZigZag</title>
+    <meta charset="UTF-8">
+    <style>
+        canvas{
+            background-color: green;
+            border: 3px solid yellow;
+        }
+    </style>
+    <script>
+    window.onload = function(){
+        canvas = document.getElementById("canvas");
+        if(canvas && canvas.getContext){
+            ctx = canvas.getContext("2d");
+            if(ctx){
+                
+                var inicioX = 85;
+                var inicioY = 70;
+                var lineas = 15
+                var desplazamiento = 30;
+
+                ctx.lineWidth = 10;
+                ctx.strokeStyle = "blue";
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round"
+                ctx.beginPath();
+                ctx.moveTo(inicioX, inicioY);
+
+                for(var i = 0; i < lineas; i++){
+                    var x = inicioX + ((i + 1) * desplazamiento);
+                    var y = inicioY;
+                    if(i % 2 == 0){
+                        y = inicioY + 100;
+                    };
+
+                    ctx.lineTo(x, y);
+                };
+
+                ctx.stroke();
+
+            } else {
+                alert("Tu navegador NO soporta la etiqueta canvas");
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="300">
+        Tu navegador no soporta la etiqueta canvas
+    </canvas>
+</body>
+</html>
