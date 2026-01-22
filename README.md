@@ -172,3 +172,30 @@ Sintaxis:
 ---
 
 ## 07 - Curvas Bezier Cúbicas
+
+Sintaxis:
+
+    ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
+
+**cp1x**   : Control Point 1 en X  
+**cp1y**   : Control Point 1 en Y  
+**cp2x**   : Control Point 2 en X  
+**cp2y**   : Control Point 2 en Y
+**X**     : punto final en X  
+**Y**     : punto final en Y  
+
+    ctx.beginPath();
+    
+        var x1 = 20, y1 = 20;
+        var cp1x = 20, cp1y = 100;
+        var cp2x = 400, cp2y = 100;
+        var x2 = 200, y2 = 300;
+
+    ctx.moveTo(x1, y1);
+    ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x2, y2);
+    ctx.stroke();
+
+---
+
+## 08 - ZigZag
+
