@@ -196,6 +196,3 @@ Sintaxis:
     ctx.stroke();
 
 ---
-
-## 08 - ZigZag
-
